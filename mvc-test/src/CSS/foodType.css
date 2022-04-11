@@ -5,7 +5,9 @@
   cursor: pointer;
   user-select: none;
 }
-
+.food-type * {
+  pointer-events: none;
+}
 /* .food-type .thumbnail {
   flex-shrink: 0;
   text-align: center;

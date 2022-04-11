@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Chicken Fried",
+    "type": "Fast Food",
+    "image": "img/fastFood/chickenFried.png",
+    "price": "70.000",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "name": "French Fried",
+    "type": "Fast Food",
+    "image": "img/fastFood/frenchFried.png",
+    "price": "20.000",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "name": "Sausage Fried",
+    "type": "Fast Food",
+    "image": "img/fastFood/sausageFried.png",
+    "price": "20.000",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "name": "Hamburger",
+    "type": "Fast Food",
+    "image": "img/fastFood/hamburger.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "Sandwich",
+    "type": "Fast Food",
+    "image": "img/fastFood/sandwich.png",
+    "price": "35.000",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "name": "Muffin",
+    "type": "Fast Food",
+    "image": "img/fastFood/muffin.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "name": "Burito",
+    "type": "Fast Food",
+    "image": "img/fastFood/burrito.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 8,
+    "name": "Cookie",
+    "type": "Fast Food",
+    "image": "img/fastFood/cookie.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 9,
+    "name": "Pizza",
+    "type": "Fast Food",
+    "image": "img/fastFood/pizza.png",
+    "price": "70.000",
+    "description": ""
+  }
+]

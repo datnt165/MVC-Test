@@ -12,7 +12,6 @@ function App() {
       <div className="left-column">
         <Navbar />
         <TypeBar />
-        <FoodBar type="Fast food" />
       </div>
       <div className="right-column">
         <Cart />

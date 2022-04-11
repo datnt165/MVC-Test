@@ -2,31 +2,31 @@
   {
     "id": 1,
     "type": "Fast Food",
-    "image": "img/fastfood.png"
+    "image": "img/foodType/fastfood.png"
   },
   {
     "id": 2,
     "type": "Cup Cake",
-    "image": "img/cupCake.png"
+    "image": "img/foodType/cupCake.png"
   },
   {
     "id": 3,
     "type": "Sea Food",
-    "image": "img/seafood.png"
+    "image": "img/foodType/seafood.png"
   },
   {
     "id": 4,
     "type": "Juice",
-    "image": "img/juice.png"
+    "image": "img/foodType/juice.png"
   },
   {
     "id": 5,
     "type": "Coca",
-    "image": "img/cola.png"
+    "image": "img/foodType/cola.png"
   },
   {
     "id": 6,
     "type": "Fruit",
-    "image": "img/fruit.png"
+    "image": "img/foodType/fruit.png"
   }
 ]

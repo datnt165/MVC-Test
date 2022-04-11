@@ -1,15 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import "../CSS/foodType.css";
-
-export default class TypeFood extends Component {
-  render() {
-    return (
-      <span className="food-type">
-        <div className="thumnail">
-          <img src={this.props.image} alt="" />
-        </div>
-        <div className="type-name">{this.props.type}</div>
-      </span>
-    );
-  }
+export default function TypeFood(props) {
+  return (
+    <span
+      className="food-type"
+      value={props.type}
+      onClick={props.clickHandler}
+      id={props.type}
+    >
+      <div className="thumnail">
+        <img src={props.image} alt="" />
+      </div>
+      <div className="type-name">{props.type}</div>
+    </span>
+  );
 }
