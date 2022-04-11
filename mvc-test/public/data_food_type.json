@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type": "Fast Food",
+    "image": "img/fastfood.png"
+  },
+  {
+    "id": 2,
+    "type": "Cup Cake",
+    "image": "img/cupCake.png"
+  },
+  {
+    "id": 3,
+    "type": "Sea Food",
+    "image": "img/seafood.png"
+  },
+  {
+    "id": 4,
+    "type": "Juice",
+    "image": "img/juice.png"
+  },
+  {
+    "id": 5,
+    "type": "Coca",
+    "image": "img/cola.png"
+  },
+  {
+    "id": 6,
+    "type": "Fruit",
+    "image": "img/fruit.png"
+  }
+]
