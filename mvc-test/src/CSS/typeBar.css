@@ -46,3 +46,9 @@
 .slick-prev:before {
   content: "" !important;
 }
+.red {
+  background-color: #ff4545 !important;
+}
+.green {
+  background-color: green !important;
+}

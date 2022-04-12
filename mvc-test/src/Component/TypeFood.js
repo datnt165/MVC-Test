@@ -3,10 +3,10 @@ import "../CSS/foodType.css";
 export default function TypeFood(props) {
   return (
     <span
-      className="food-type"
+      className={`food-type`}
       value={props.type}
       onClick={props.clickHandler}
-      id={props.type}
+      id={props.code}
     >
       <div className="thumnail">
         <img src={props.image} alt="" />

@@ -12,7 +12,7 @@ export default function Cart() {
         <div className="cart-item-list">
           <div className="row item">
             <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
+              <img src="img/fastFood/hamburger.png" alt="" />
             </div>
             <div className="col-2">
               <div className="row name">Hamburger</div>

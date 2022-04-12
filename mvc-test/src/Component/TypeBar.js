@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../CSS/typeBar.css";
 import TypeFood from "./TypeFood";
 import Slider from "react-slick";
@@ -31,11 +31,28 @@ function SamplePrevArrow(props) {
 export default function TypeBar() {
   const [suggestions, setSuggestions] = useState([]);
   const [foodList, setFoodList] = useState([]);
+  const [foodType, setFoodType] = useState([]);
 
   function clickHandler(e) {
-    let type = e.target.id;
-    console.log(type);
-    getData(type);
+    let cls = e.target.classList;
+    let id = e.target.id;
+    let type = e.target.childNodes[1].firstChild.data;
+    if (Object.values(cls).indexOf("red") > -1) {
+      document.querySelectorAll("#" + id).forEach((element) => {
+        element.classList.remove("red");
+      });
+      setFoodType("All");
+      getData("all");
+    } else {
+      document.querySelectorAll(".food-type").forEach((element) => {
+        element.classList.remove("red");
+      });
+      document.querySelectorAll("#" + id).forEach((element) => {
+        element.classList.add("red");
+      });
+      setFoodType(type);
+      getData(type);
+    }
   }
 
   const getData = (type) => {
@@ -61,24 +78,25 @@ export default function TypeBar() {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         return response.json();
       })
       .then(function (myJson) {
-        console.log(type);
+        // console.log(type);
         let filter = myJson.filter((food) => food.type === type);
-        console.log(filter);
+        // console.log(filter);
         type === "all" ? setFoodList(myJson) : setFoodList(filter);
       });
   };
 
   useEffect(() => {
     getData("all");
+    setFoodType("All");
   }, []);
 
   let settings = {
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     dots: false,
     infinity: true,
     speed: 500,
@@ -119,6 +137,7 @@ export default function TypeBar() {
             <TypeFood
               image={current.image}
               type={current.type}
+              code={current.code}
               key={current.id}
               clickHandler={clickHandler}
             />
@@ -127,16 +146,16 @@ export default function TypeBar() {
       </div>
       <div>
         <div className="title-food">
-          <span>Sua lai</span>
+          <span>{foodType}</span>
           <div className="line"></div>
         </div>
         <div className="food-list">
-          {foodList.map((current) => (
+          {foodList.map((current, index) => (
             <Product
               title={current.name}
               image={current.image}
               price={current.price}
-              stt={current.id}
+              stt={index + 1}
               key={current.id}
             />
           ))}
