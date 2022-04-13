@@ -37,6 +37,7 @@ export default function TypeBar() {
     let cls = e.target.classList;
     let id = e.target.id;
     let type = e.target.childNodes[1].firstChild.data;
+    console.log(type);
     if (Object.values(cls).indexOf("red") > -1) {
       document.querySelectorAll("#" + id).forEach((element) => {
         element.classList.remove("red");

@@ -70,5 +70,189 @@
     "image": "img/fastFood/pizza.png",
     "price": "70.000",
     "description": ""
+  },
+  {
+    "id": 10,
+    "name": "Coconut",
+    "type": "Cupcake",
+    "image": "img/cupcake/coconut-cupcake.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 11,
+    "name": "Margarita",
+    "type": "Cupcake",
+    "image": "img/cupcake/margarita-cupcake.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 12,
+    "name": "Chocolate",
+    "type": "Cupcake",
+    "image": "img/cupcake/chocolate-cupcake.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 13,
+    "name": "Mocha",
+    "type": "Cupcake",
+    "image": "img/cupcake/mocha-cupcake.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 14,
+    "name": "Pumpkin",
+    "type": "Cupcake",
+    "image": "img/cupcake/pumpkin-cupcake.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 15,
+    "name": "Crab Soup",
+    "type": "Sea Food",
+    "image": "img/seafood/crab-soup.png",
+    "price": "120.000",
+    "description": ""
+  },
+  {
+    "id": 16,
+    "name": "Steamed Shrimp",
+    "type": "Sea Food",
+    "image": "img/seafood/steam-shrimp.png",
+    "price": "120.000",
+    "description": ""
+  },
+  {
+    "id": 17,
+    "name": "Steamed Crab",
+    "type": "Sea Food",
+    "image": "img/seafood/steam-crab.png",
+    "price": "150.000",
+    "description": ""
+  },
+  {
+    "id": 18,
+    "name": "Orange Juice",
+    "type": "Juice",
+    "image": "img/juice/orange-juice.png",
+    "price": "40.000",
+    "description": ""
+  },
+  {
+    "id": 19,
+    "name": "Apple Juice",
+    "type": "Juice",
+    "image": "img/juice/apple-juice.png",
+    "price": "40.000",
+    "description": ""
+  },
+  {
+    "id": 20,
+    "name": "Carrot Juice",
+    "type": "Juice",
+    "image": "img/juice/carrot-juice.png",
+    "price": "40.000",
+    "description": ""
+  },
+  {
+    "id": 21,
+    "name": "Blueberry Juice",
+    "type": "Juice",
+    "image": "img/juice/blueberry-juice.png",
+    "price": "40.000",
+    "description": ""
+  },
+  {
+    "id": 22,
+    "name": "Coca Cola",
+    "type": "Coca",
+    "image": "img/softdrink/coca.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 23,
+    "name": "Pepsi",
+    "type": "Coca",
+    "image": "img/softdrink/pepsi.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 24,
+    "name": "Fanta",
+    "type": "Coca",
+    "image": "img/softdrink/fanta.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 25,
+    "name": "Sprite",
+    "type": "Coca",
+    "image": "img/softdrink/sprite.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 26,
+    "name": "Mountain Dew",
+    "type": "Coca",
+    "image": "img/softdrink/mtdew.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 27,
+    "name": "Monster",
+    "type": "Coca",
+    "image": "img/softdrink/monster.png",
+    "price": "60.000",
+    "description": ""
+  },
+  {
+    "id": 28,
+    "name": "Banana",
+    "type": "Fruit",
+    "image": "img/fruit/banana.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 29,
+    "name": "Water Melon",
+    "type": "Fruit",
+    "image": "img/fruit/wtmelon.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 30,
+    "name": "Mango",
+    "type": "Fruit",
+    "image": "img/fruit/mango.png",
+    "price": "30.000",
+    "description": ""
+  },
+  {
+    "id": 31,
+    "name": "Rasperry",
+    "type": "Fruit",
+    "image": "img/fruit/rasperry.png",
+    "price": "50.000",
+    "description": ""
+  },
+  {
+    "id": 32,
+    "name": "Orange",
+    "type": "Fruit",
+    "image": "img/fruit/orange.png",
+    "price": "50.000",
+    "description": ""
   }
 ]
