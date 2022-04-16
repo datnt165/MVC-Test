@@ -58,3 +58,17 @@ body {
     transform: rotate(360deg);
   }
 }
+.row {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+.col-3 {
+  flex: 3;
+}

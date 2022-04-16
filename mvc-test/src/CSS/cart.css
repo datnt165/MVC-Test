@@ -10,20 +10,7 @@
   margin: 0;
   margin-left: 5px;
 }
-.row {
-  display: flex;
-  align-items: center;
-  padding: 2px;
-}
-.col-1 {
-  flex: 1;
-}
-.col-2 {
-  flex: 2;
-}
-.col-3 {
-  flex: 3;
-}
+
 .block h2 {
   font-size: 1.5rem;
   margin-left: 10px;
@@ -38,28 +25,21 @@
 }
 button.def {
   box-sizing: border-box;
-  font-size: 0.8rem;
-  /* padding: 0.2rem; */
+  width: 1.5rem;
+  font-size: 1em;
+  font-weight: 600;
   margin: 0.1rem;
-  border-radius: 0.3rem;
-  width: 100%;
+  border-radius: 30%;
   cursor: pointer;
+  background-color: white;
 }
 button.add {
-  background-color: white;
-  width: 1.5rem;
   border: 0.1rem solid #fdbfbf;
   color: red;
-  font-size: 1em;
-  font-weight: 600;
 }
 button.remove {
-  background-color: white;
-  width: 1.5rem;
   border: 0.1rem solid #dee0e5;
   color: #535e76;
-  font-size: 1em;
-  font-weight: 600;
 }
 .quantity {
   display: inline-block;
@@ -103,4 +83,20 @@ button.payment-button {
 .total {
   font-size: 1.5rem;
   font-weight: 700;
+}
+.add-cart-button {
+  background-color: red;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  margin: 20px 0 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+div strong {
+  margin: 10px 10px;
+}
+div.detail-info div {
+  padding: 10px 0;
 }

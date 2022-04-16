@@ -158,6 +158,9 @@ export default function TypeBar() {
               price={current.price}
               stt={index + 1}
               key={current.id}
+              type={current.type}
+              name={current.name}
+              detail={current.detail}
             />
           ))}
         </div>
