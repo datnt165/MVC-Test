@@ -22,6 +22,7 @@ export default function FoodBar() {
       <div className="food-list">
         {suggestions.map((current) => (
           <Product
+            item={current}
             title={current.name}
             image={current.image}
             price={current.price}

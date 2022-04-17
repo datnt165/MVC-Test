@@ -63,10 +63,10 @@ export default function TypeBar() {
         Accept: "application/json",
       },
     })
-      .then(function (response) {
+      .then(function(response) {
         return response.json();
       })
-      .then(function (myJson) {
+      .then(function(myJson) {
         // let filter = myJson.filter((food) => food.type === type);
         // type === "all" ? setSuggestions(myJson) : setSuggestions(filter);
         setSuggestions(myJson);
@@ -78,11 +78,11 @@ export default function TypeBar() {
         Accept: "application/json",
       },
     })
-      .then(function (response) {
+      .then(function(response) {
         // console.log(response);
         return response.json();
       })
-      .then(function (myJson) {
+      .then(function(myJson) {
         // console.log(type);
         let filter = myJson.filter((food) => food.type === type);
         // console.log(filter);

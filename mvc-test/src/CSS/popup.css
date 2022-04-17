@@ -73,3 +73,13 @@
 .pd-1 {
   padding: 10px;
 }
+p.price {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+div.detail-info span {
+  font-weight: 400;
+  color: #c0c0c0;
+  float: none;
+}
