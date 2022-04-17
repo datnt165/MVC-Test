@@ -7,7 +7,10 @@
     "price": "70.000",
     "detail": {
       "sku": "401",
-      "protein": "245.9 kcal"
+      "protein": "245.9 kcal",
+      "additive": "04",
+      "baking": "040",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -18,7 +21,10 @@
     "price": "20.000",
     "detail": {
       "sku": "402",
-      "protein": "161.9 kcal"
+      "protein": "161.9 kcal",
+      "additive": "07",
+      "baking": "050",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -29,7 +35,10 @@
     "price": "20.000",
     "detail": {
       "sku": "403",
-      "protein": "309 kcal"
+      "protein": "309 kcal",
+      "additive": "06",
+      "baking": "041",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -40,9 +49,13 @@
     "price": "30.000",
     "detail": {
       "sku": "404",
-      "protein": "256 kcal"
+      "protein": "256 kcal",
+      "additive": "05",
+      "baking": "023",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
+
   {
     "id": 5,
     "name": "Sandwich",
@@ -51,7 +64,10 @@
     "price": "35.000",
     "detail": {
       "sku": "404",
-      "protein": "357.2 kcal"
+      "protein": "357.2 kcal",
+      "additive": "07",
+      "baking": "010",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -62,7 +78,10 @@
     "price": "30.000",
     "detail": {
       "sku": "405",
-      "protein": "57.2 kcal"
+      "protein": "57.2 kcal",
+      "additive": "02",
+      "baking": "030",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -73,7 +92,10 @@
     "price": "30.000",
     "detail": {
       "sku": "406",
-      "protein": "58.2 kcal"
+      "protein": "58.2 kcal",
+      "additive": "01",
+      "baking": "031",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -84,7 +106,10 @@
     "price": "30.000",
     "detail": {
       "sku": "407",
-      "protein": "67.3 kcal"
+      "protein": "67.3 kcal",
+      "additive": "05",
+      "baking": "045",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -95,7 +120,10 @@
     "price": "70.000",
     "detail": {
       "sku": "408",
-      "protein": "264.2 kcal"
+      "protein": "264.2 kcal",
+      "additive": "06",
+      "baking": "028",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -106,7 +134,10 @@
     "price": "30.000",
     "detail": {
       "sku": "409",
-      "protein": "157.2 kcal"
+      "protein": "157.2 kcal",
+      "additive": "04",
+      "baking": "035",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -117,7 +148,10 @@
     "price": "30.000",
     "detail": {
       "sku": "410",
-      "protein": "131.3 kcal"
+      "protein": "131.3 kcal",
+      "additive": "05",
+      "baking": "015",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -128,7 +162,10 @@
     "price": "30.000",
     "detail": {
       "sku": "411",
-      "protein": "166.5 kcal"
+      "protein": "166.5 kcal",
+      "additive": "02",
+      "baking": "014",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -139,7 +176,10 @@
     "price": "30.000",
     "detail": {
       "sku": "412",
-      "protein": "191.5 kcal"
+      "protein": "191.5 kcal",
+      "additive": "08",
+      "baking": "042",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -150,7 +190,10 @@
     "price": "30.000",
     "detail": {
       "sku": "413",
-      "protein": "101.5 kcal"
+      "protein": "101.5 kcal",
+      "additive": "06",
+      "baking": "032",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -161,7 +204,10 @@
     "price": "120.000",
     "detail": {
       "sku": "414",
-      "protein": "198.9 kcal"
+      "protein": "198.9 kcal",
+      "additive": "03",
+      "baking": "036",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -172,7 +218,10 @@
     "price": "120.000",
     "detail": {
       "sku": "415",
-      "protein": "326.1 kcal"
+      "protein": "326.1 kcal",
+      "additive": "05",
+      "baking": "026",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -183,7 +232,10 @@
     "price": "150.000",
     "detail": {
       "sku": "416",
-      "protein": "202.5 kcal"
+      "protein": "202.5 kcal",
+      "additive": "07",
+      "baking": "016",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -194,7 +246,10 @@
     "price": "40.000",
     "detail": {
       "sku": "417",
-      "protein": "110 kcal"
+      "protein": "110 kcal",
+      "additive": "04",
+      "baking": "020",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -205,7 +260,10 @@
     "price": "40.000",
     "detail": {
       "sku": "418",
-      "protein": "4,9 gram"
+      "protein": "4,9 gram",
+      "additive": "03",
+      "baking": "048",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -216,7 +274,10 @@
     "price": "40.000",
     "detail": {
       "sku": "419",
-      "protein": "117.8 kcal"
+      "protein": "117.8 kcal",
+      "additive": "04",
+      "baking": "034",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -227,7 +288,10 @@
     "price": "40.000",
     "detail": {
       "sku": "420",
-      "protein": "136.4 kcal"
+      "protein": "136.4 kcal",
+      "additive": "02",
+      "baking": "027",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -238,7 +302,10 @@
     "price": "30.000",
     "detail": {
       "sku": "421",
-      "protein": "139 kcal"
+      "protein": "139 kcal",
+      "additive": "01",
+      "baking": "015",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -249,7 +316,10 @@
     "price": "30.000",
     "detail": {
       "sku": "422",
-      "protein": "133 kcal"
+      "protein": "133 kcal",
+      "additive": "04",
+      "baking": "019",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -260,7 +330,10 @@
     "price": "30.000",
     "detail": {
       "sku": "423",
-      "protein": "108 kcal"
+      "protein": "108 kcal",
+      "additive": "05",
+      "baking": "029",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -271,7 +344,10 @@
     "price": "30.000",
     "detail": {
       "sku": "424",
-      "protein": "108 kcal"
+      "protein": "108 kcal",
+      "additive": "03",
+      "baking": "034",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -282,7 +358,10 @@
     "price": "30.000",
     "detail": {
       "sku": "425",
-      "protein": "290 gram"
+      "protein": "290 gram",
+      "additive": "02",
+      "baking": "046",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -293,7 +372,10 @@
     "price": "60.000",
     "detail": {
       "sku": "426",
-      "protein": "110 kcal"
+      "protein": "110 kcal",
+      "additive": "02",
+      "baking": "043",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -304,7 +386,10 @@
     "price": "30.000",
     "detail": {
       "sku": "427",
-      "protein": "88.7 kcal"
+      "protein": "88.7 kcal",
+      "additive": "03",
+      "baking": "041",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -315,7 +400,10 @@
     "price": "30.000",
     "detail": {
       "sku": "428",
-      "protein": "30.4 kcal"
+      "protein": "30.4 kcal",
+      "additive": "02",
+      "baking": "038",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -326,7 +414,10 @@
     "price": "30.000",
     "detail": {
       "sku": "429",
-      "protein": "59.8 kcal"
+      "protein": "59.8 kcal",
+      "additive": "03",
+      "baking": "031",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -337,7 +428,10 @@
     "price": "50.000",
     "detail": {
       "sku": "430",
-      "protein": "52.6 kcal"
+      "protein": "52.6 kcal",
+      "additive": "04",
+      "baking": "024",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   },
   {
@@ -348,7 +442,10 @@
     "price": "50.000",
     "detail": {
       "sku": "431",
-      "protein": "47.1 kcal"
+      "protein": "47.1 kcal",
+      "additive": "02",
+      "baking": "029",
+      "decoration": "Lorem ipsum dolor sit amet"
     }
   }
 ]
