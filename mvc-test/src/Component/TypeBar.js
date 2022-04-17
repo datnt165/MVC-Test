@@ -28,72 +28,73 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function TypeBar() {
-  const [suggestions, setSuggestions] = useState([]);
-  const [foodList, setFoodList] = useState([]);
-  const [foodType, setFoodType] = useState([]);
+export default function TypeBar(props) {
+  const { suggestions, foodList, foodType, clickHandler, onAdd } = props;
+  // const [suggestions, setSuggestions] = useState([]);
+  // const [foodList, setFoodList] = useState([]);
+  // const [foodType, setFoodType] = useState([]);
 
-  function clickHandler(e) {
-    let cls = e.target.classList;
-    let id = e.target.id;
-    let type = e.target.childNodes[1].firstChild.data;
-    console.log(type);
-    if (Object.values(cls).indexOf("red") > -1) {
-      document.querySelectorAll("#" + id).forEach((element) => {
-        element.classList.remove("red");
-      });
-      setFoodType("All");
-      getData("all");
-    } else {
-      document.querySelectorAll(".food-type").forEach((element) => {
-        element.classList.remove("red");
-      });
-      document.querySelectorAll("#" + id).forEach((element) => {
-        element.classList.add("red");
-      });
-      setFoodType(type);
-      getData(type);
-    }
-  }
+  // function clickHandler(e) {
+  //   let cls = e.target.classList;
+  //   let id = e.target.id;
+  //   let type = e.target.childNodes[1].firstChild.data;
+  //   console.log(type);
+  //   if (Object.values(cls).indexOf("red") > -1) {
+  //     document.querySelectorAll("#" + id).forEach((element) => {
+  //       element.classList.remove("red");
+  //     });
+  //     setFoodType("All");
+  //     getData("all");
+  //   } else {
+  //     document.querySelectorAll(".food-type").forEach((element) => {
+  //       element.classList.remove("red");
+  //     });
+  //     document.querySelectorAll("#" + id).forEach((element) => {
+  //       element.classList.add("red");
+  //     });
+  //     setFoodType(type);
+  //     getData(type);
+  //   }
+  // }
 
-  const getData = (type) => {
-    fetch("data_food_type.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        // let filter = myJson.filter((food) => food.type === type);
-        // type === "all" ? setSuggestions(myJson) : setSuggestions(filter);
-        setSuggestions(myJson);
-      });
+  // const getData = (type) => {
+  //   fetch("data_food_type.json", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //   })
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (myJson) {
+  //       // let filter = myJson.filter((food) => food.type === type);
+  //       // type === "all" ? setSuggestions(myJson) : setSuggestions(filter);
+  //       setSuggestions(myJson);
+  //     });
 
-    fetch("data_food.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        // console.log(response);
-        return response.json();
-      })
-      .then(function (myJson) {
-        // console.log(type);
-        let filter = myJson.filter((food) => food.type === type);
-        // console.log(filter);
-        type === "all" ? setFoodList(myJson) : setFoodList(filter);
-      });
-  };
+  //   fetch("data_food.json", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //   })
+  //     .then(function (response) {
+  //       // console.log(response);
+  //       return response.json();
+  //     })
+  //     .then(function (myJson) {
+  //       // console.log(type);
+  //       let filter = myJson.filter((food) => food.type === type);
+  //       // console.log(filter);
+  //       type === "all" ? setFoodList(myJson) : setFoodList(filter);
+  //     });
+  // };
 
-  useEffect(() => {
-    getData("all");
-    setFoodType("All");
-  }, []);
+  // useEffect(() => {
+  //   getData("all");
+  //   setFoodType("All");
+  // }, []);
 
   let settings = {
     autoplay: true,
@@ -153,14 +154,10 @@ export default function TypeBar() {
         <div className="food-list">
           {foodList.map((current, index) => (
             <Product
-              title={current.name}
-              image={current.image}
-              price={current.price}
+              product={current}
               stt={index + 1}
-              key={current.id}
-              type={current.type}
-              name={current.name}
-              detail={current.detail}
+              key={index}
+              onAdd={onAdd}
             />
           ))}
         </div>

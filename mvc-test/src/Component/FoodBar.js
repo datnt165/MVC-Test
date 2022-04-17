@@ -12,7 +12,6 @@ export default function FoodBar() {
       });
   }, []);
 
-  const superHeroObj = { name: "Ironman", weapon: "Suit" };
   return (
     <div>
       <div className="title-food">

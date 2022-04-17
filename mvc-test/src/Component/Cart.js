@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/cart.css";
-export default function Cart() {
+export default function Cart({ cartItems }) {
   return (
     <div>
       <aside className="block col-1">
@@ -10,140 +10,23 @@ export default function Cart() {
         </div>
 
         <div className="cart-item-list">
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastFood/hamburger.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
+          {cartItems.length === 0 && <div>Cart is empty</div>}
+          {cartItems.map((item) => (
+            <div className="row item">
+              <div className="col-1">
+                <img src={item.image} alt="" />
               </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
+              <div className="col-3">
+                <div className="row name">{item.name}</div>
+                <div className="row">
+                  <button className="remove def">-</button>
+                  <div className="quantity">{item.qty}</div>
+                  <button className="add def">+</button>
+                </div>
               </div>
+              <div className="col-3 align-right price">{item.price}</div>
             </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
-
-          <div className="row item">
-            <div className="col-1">
-              <img src="img/fastfood.png" alt="" />
-            </div>
-            <div className="col-2">
-              <div className="row name">Hamburger</div>
-              <div className="row">
-                <button className="remove def">-</button>
-                <div className="quantity">1</div>
-                <button className="add def">+</button>
-              </div>
-            </div>
-            <div className="col-3 align-right price">25.000 VND</div>
-          </div>
+          ))}
         </div>
 
         <div className="payment">

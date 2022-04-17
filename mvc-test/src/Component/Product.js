@@ -5,35 +5,35 @@ import { useState } from "react";
 
 export default function Product(props) {
   const [buttonPopup, setButtonPopup] = useState(false);
-
+  const { product, stt, onAdd } = props;
   return (
     <span className="styleItem">
-      <div
-        className="product"
-        onClick={() => {
-          setButtonPopup(true);
-        }}
-      >
-        <div className="thumbnail">
-          <img src={props.image} alt="" />
+      <div className="product">
+        <div
+          className="thumbnail"
+          onClick={() => {
+            setButtonPopup(true);
+          }}
+        >
+          <img src={product.image} alt="" />
         </div>
         <div className="product-info">
           <div className="product-name">
-            {props.stt}. {props.title}
+            {stt}. {product.name}
           </div>
-          <div className="product-price">{props.price} VND</div>
+          <div className="product-price">{product.price} VND</div>
 
-          <button></button>
+          <button onClick={() => onAdd(product)}></button>
         </div>
       </div>
       <Popup
         trigger={buttonPopup}
         setTrigger={() => setButtonPopup(false)}
-        detail={props.detail}
-        type={props.type}
-        name={props.name}
-        image={props.image}
-        price={props.price}
+        detail={product.detail}
+        type={product.type}
+        name={product.name}
+        image={product.image}
+        price={product.price}
       />
     </span>
   );
