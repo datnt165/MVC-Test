@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CSS/popup.css";
 export default function Popup(props) {
+  // const [trigger, setTrigger, product, onAdd] = props;
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(props.price);
 
@@ -20,7 +21,7 @@ export default function Popup(props) {
 
   function handleIncrease() {
     setQuantity((prevQuantity) => prevQuantity + 1);
-    let a = quantity * props.price + parseInt(props.price);
+    let a = quantity * props.product.price + parseInt(props.product.price);
     setPrice(a + ".000");
   }
 
@@ -28,7 +29,7 @@ export default function Popup(props) {
     setQuantity((prevQuantity) =>
       prevQuantity === 0 ? prevQuantity : prevQuantity - 1
     );
-    let a = quantity * props.price - parseInt(props.price);
+    let a = quantity * props.product.price - parseInt(props.product.price);
     if (a > 0) setPrice(a + ".000");
     else if (a === 0) setPrice(0);
     // setPrice(quantity * props.price);
@@ -43,28 +44,28 @@ export default function Popup(props) {
             className="close-btn "
             onClick={() => {
               props.setTrigger(false);
-              setPrice(props.price);
+              setPrice(props.product.price);
               setQuantity(1);
             }}
           ></button>
         </div>
         <div className="row row-2">
           <div className="col-1">
-            <img src={props.image} alt="" className="mini-img" />
+            <img src={props.product.image} alt="" className="mini-img" />
           </div>
           <div className="col-2 ">
             <div className="row main-info">
               <div className="col-1">
                 <h4>SKU</h4>
-                <p>{props.detail.sku}</p>
+                <p>{props.product.detail.sku}</p>
               </div>
               <div className="col-2">
-                <h4>{props.type}</h4>
-                <p>{props.name}</p>
+                <h4>{props.product.type}</h4>
+                <p>{props.product.name}</p>
               </div>
               <div className="col-2 align-right">
                 <h4>Unit Price</h4>
-                <p className="price">{props.price} VND</p>
+                <p className="price">{props.product.price} VND</p>
               </div>
             </div>
             <div className="mini-line"></div>
@@ -87,22 +88,32 @@ export default function Popup(props) {
             <div className="mini-line"></div>
             <div className="detail-info">
               <div>
-                <strong>Protein:</strong> <span>{props.detail.protein}</span>
+                <strong>Protein:</strong>{" "}
+                <span>{props.product.detail.protein}</span>
               </div>
               <div>
-                <strong>Additves:</strong> <span>{props.detail.additive}</span>
+                <strong>Additves:</strong>{" "}
+                <span>{props.product.detail.additive}</span>
               </div>
               <div>
                 <strong>Baking material:</strong>{" "}
-                <span>{props.detail.baking}</span>
+                <span>{props.product.detail.baking}</span>
               </div>
               <div>
                 <strong>Food decoration:</strong>{" "}
-                <span>{props.detail.decoration}</span>
+                <span>{props.product.detail.decoration}</span>
               </div>
             </div>
             <div className="row">
-              <button className="add-cart-button col-1">
+              <button
+                className="add-cart-button col-1"
+                onClick={() => {
+                  if (quantity !== 0) props.onAdd(props.product, quantity);
+                  setQuantity(1);
+                  setPrice(props.product.price);
+                  props.setTrigger(false);
+                }}
+              >
                 Thêm {price} VND
               </button>
             </div>

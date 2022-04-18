@@ -12,16 +12,16 @@ function App() {
   const [foodList, setFoodList] = useState([]);
   const [foodType, setFoodType] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const onAdd = (product) => {
+  const onAdd = (product, qty = 1) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x.id === product.id ? { ...exist, qty: exist.qty + qty } : x
         )
       );
     } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
+      setCartItems([...cartItems, { ...product, qty: qty }]);
     }
   };
   const onRemove = (product) => {
@@ -43,10 +43,10 @@ function App() {
         Accept: "application/json",
       },
     })
-      .then(function(response) {
+      .then(function (response) {
         return response.json();
       })
-      .then(function(myJson) {
+      .then(function (myJson) {
         // let filter = myJson.filter((food) => food.type === type);
         // type === "all" ? setSuggestions(myJson) : setSuggestions(filter);
         setSuggestions(myJson);
@@ -58,11 +58,11 @@ function App() {
         Accept: "application/json",
       },
     })
-      .then(function(response) {
+      .then(function (response) {
         // console.log(response);
         return response.json();
       })
-      .then(function(myJson) {
+      .then(function (myJson) {
         // console.log(type);
         let filter = myJson.filter((food) => food.type === type);
         // console.log(filter);
@@ -110,7 +110,7 @@ function App() {
         />
       </div>
       <div className="right-column">
-        <Cart cartItems={cartItems} />
+        <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />
       </div>
     </div>
   );

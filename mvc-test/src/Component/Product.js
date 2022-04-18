@@ -29,11 +29,8 @@ export default function Product(props) {
       <Popup
         trigger={buttonPopup}
         setTrigger={() => setButtonPopup(false)}
-        detail={product.detail}
-        type={product.type}
-        name={product.name}
-        image={product.image}
-        price={product.price}
+        product={product}
+        onAdd={onAdd}
       />
     </span>
   );

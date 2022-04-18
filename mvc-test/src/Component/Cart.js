@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../CSS/cart.css";
-export default function Cart({ cartItems }) {
+
+export default function Cart(props) {
+  const { cartItems, onAdd, onRemove } = props;
+  const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   return (
     <div>
       <aside className="block col-1">
@@ -19,12 +22,18 @@ export default function Cart({ cartItems }) {
               <div className="col-3">
                 <div className="row name">{item.name}</div>
                 <div className="row">
-                  <button className="remove def">-</button>
+                  <button className="remove def" onClick={() => onRemove(item)}>
+                    -
+                  </button>
                   <div className="quantity">{item.qty}</div>
-                  <button className="add def">+</button>
+                  <button className="add def" onClick={() => onAdd(item)}>
+                    +
+                  </button>
                 </div>
               </div>
-              <div className="col-3 align-right price">{item.price}</div>
+              <div className="col-3 align-right price">
+                {item.qty * item.price}.000 VND
+              </div>
             </div>
           ))}
         </div>
@@ -36,7 +45,7 @@ export default function Cart({ cartItems }) {
               className="col-1 price"
               style={{ fontWeight: "700", fontSize: "1.25rem" }}
             >
-              500.000 VND
+              {itemsPrice}.000 VND
             </div>
           </div>
           <div className="row">
