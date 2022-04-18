@@ -13,7 +13,9 @@ export default function Cart(props) {
         </div>
 
         <div className="cart-item-list">
-          {cartItems.length === 0 && <div>Cart is empty</div>}
+          {cartItems.length === 0 && (
+            <img src="img/empty-cart.png" alt="" className="empty-cart" />
+          )}
           {cartItems.map((item) => (
             <div className="row item">
               <div className="col-1">

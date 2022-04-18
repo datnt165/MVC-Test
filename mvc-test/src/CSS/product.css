@@ -15,6 +15,11 @@
   border-radius: 10%;
   box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 10px 0px;
   background-color: white;
+  transition: all 0.3s ease-out;
+  --bg-color: #fbe4b98e;
+  --bg-color-light: #e6e2a7;
+  --text-color-hover: #4c5656;
+  --box-shadow-color: rgba(184, 249, 211, 0.48);
 }
 .thumbnail {
   box-sizing: border-box;
@@ -74,4 +79,17 @@
   border-radius: 20%;
   margin-right: 15px;
   cursor: pointer;
+}
+.product:hover {
+  transform: translateY(-10px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+  /* border-color: var(--bg-color-light); */
+  background: var(--bg-color);
+  border: none;
+}
+
+.product:hover img {
+  filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
+    drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
 }
