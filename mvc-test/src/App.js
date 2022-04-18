@@ -11,16 +11,36 @@ function App() {
   const [suggestions, setSuggestions] = useState([]);
   const [foodList, setFoodList] = useState([]);
   const [foodType, setFoodType] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+
+  const storageCartItem = JSON.parse(localStorage.getItem("cartItems"));
+
+  const [cartItems, setCartItems] = useState(storageCartItem ?? []);
+
+  const saveToLocal = () => {
+    const jsonCartItem = JSON.stringify(cartItems);
+    localStorage.setItem("cartItems", jsonCartItem);
+  };
+
   const onAdd = (product, qty = 1) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
+      const jsonCartItem = JSON.stringify(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + qty } : x
+        )
+      );
+      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems(
         cartItems.map((x) =>
           x.id === product.id ? { ...exist, qty: exist.qty + qty } : x
         )
       );
     } else {
+      const jsonCartItem = JSON.stringify([
+        ...cartItems,
+        { ...product, qty: qty },
+      ]);
+      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems([...cartItems, { ...product, qty: qty }]);
     }
   };

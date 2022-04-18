@@ -3,13 +3,13 @@ import "../CSS/popup.css";
 export default function Popup(props) {
   // const [trigger, setTrigger, product, onAdd] = props;
   const [quantity, setQuantity] = useState(1);
-  const [price, setPrice] = useState(props.price);
+  const [price, setPrice] = useState(props.product.price);
 
   useEffect(() => {
     const checkIfClickOutside = (e) => {
       if (e.target.className === "popup") {
         props.setTrigger(false);
-        setPrice(props.price);
+        setPrice(props.product.price);
         setQuantity(1);
       }
     };
