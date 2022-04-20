@@ -22,7 +22,7 @@ span {
   box-shadow: 1px 0 1px;
 }
 .food-list {
-  height: 500px;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;

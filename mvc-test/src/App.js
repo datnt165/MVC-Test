@@ -5,21 +5,28 @@ import TypeBar from "./Component/TypeBar";
 import TypeFood from "./Component/TypeFood";
 import FoodBar from "./Component/FoodBar";
 import Cart from "./Component/Cart";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 992px)",
+  });
+  const isTablet = useMediaQuery({
+    query: "(min-width: 600px)",
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
+
   const [suggestions, setSuggestions] = useState([]);
   const [foodList, setFoodList] = useState([]);
   const [foodType, setFoodType] = useState([]);
+  const [trigger, setTrigger] = useState(false);
 
   const storageCartItem = JSON.parse(localStorage.getItem("cartItems"));
 
   const [cartItems, setCartItems] = useState(storageCartItem ?? []);
-
-  const saveToLocal = () => {
-    const jsonCartItem = JSON.stringify(cartItems);
-    localStorage.setItem("cartItems", jsonCartItem);
-  };
 
   const onAdd = (product, qty = 1) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -47,8 +54,18 @@ function App() {
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
+      const jsonCartItem = JSON.stringify(
+        cartItems.filter((x) => x.id !== product.id)
+      );
+      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems(cartItems.filter((x) => x.id !== product.id));
     } else {
+      const jsonCartItem = JSON.stringify(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems(
         cartItems.map((x) =>
           x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
@@ -120,7 +137,10 @@ function App() {
   return (
     <div className="App">
       <div className="left-column">
-        <Navbar />
+        <Navbar
+          responsive={isDesktop ? "desktop" : isMobile ? "mobile" : "tablet"}
+          setTrigger={setTrigger}
+        />
         <TypeBar
           suggestions={suggestions}
           foodList={foodList}
@@ -130,7 +150,14 @@ function App() {
         />
       </div>
       <div className="right-column">
-        <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />
+        <Cart
+          cartItems={cartItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          responsive={isMobile}
+          trigger={trigger}
+          setTrigger={setTrigger}
+        />
       </div>
     </div>
   );

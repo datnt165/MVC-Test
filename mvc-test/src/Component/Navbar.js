@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 import "../CSS/nav.css";
 
-export class Navbar extends Component {
-  render() {
-    return (
-      <div className="nav">
-        <button className="home"></button>
+export default function Navbar(props) {
+  return (
+    <div className="nav">
+      <button className="home"></button>
+      {props.responsive === "mobile" ? (
+        <button
+          className="cart"
+          onClick={() => props.setTrigger(true)}
+        ></button>
+      ) : (
         <div className="back-to-home">Back to home</div>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 }
-
-export default Navbar;

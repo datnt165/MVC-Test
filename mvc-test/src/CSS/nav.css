@@ -28,3 +28,52 @@ button.home {
   margin-left: 15px;
   cursor: pointer;
 }
+
+button.cart {
+  display: flex;
+  float: right;
+  background: no-repeat center;
+  padding: 15px;
+  height: 24px;
+  width: 24px;
+  background-image: url("/public/img/shoppingcart.png");
+  background-color: red;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 20%;
+  margin-right: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.cart-popup {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-cart-inner {
+  width: 100%;
+  max-width: 640px;
+  /* background-color: #fff; */
+}
+.popup-cart-inner .close-btn {
+  width: 40px;
+  height: 40px;
+  background: url("/public/img/close.jpg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+}
+.cart-img {
+  width: 50% !important;
+}
