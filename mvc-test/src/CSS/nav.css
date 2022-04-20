@@ -28,3 +28,10 @@ button.home {
   margin-left: 15px;
   cursor: pointer;
 }
+
+.login-field{
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 30%;
+}
