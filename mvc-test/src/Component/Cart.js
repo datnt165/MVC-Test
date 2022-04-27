@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../CSS/cart.css";
+import { Link } from "react-router-dom";
 
 export default function Cart(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -64,7 +65,9 @@ export default function Cart(props) {
               </div>
             </div>
             <div className="row">
-              <button className="payment-button ">Payment</button>
+              <button className="payment-button ">
+                <Link to="/login">Payment</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -124,7 +127,15 @@ export default function Cart(props) {
             </div>
           </div>
           <div className="row">
-            <button className="payment-button ">Payment</button>
+            <button className="payment-button ">
+              <Link
+                to="/payment"
+                state={{ price: itemsPrice }}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Payment
+              </Link>
+            </button>
           </div>
         </div>
       </aside>

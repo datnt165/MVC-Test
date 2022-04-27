@@ -7,6 +7,10 @@ import FoodBar from "./Component/FoodBar";
 import Cart from "./Component/Cart";
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Component/Login";
+import Register from "./Component/Register";
+import Payment from "./Component/Payment";
 
 function App() {
   const isDesktop = useMediaQuery({
@@ -31,41 +35,20 @@ function App() {
   const onAdd = (product, qty = 1) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
-      const jsonCartItem = JSON.stringify(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + qty } : x
-        )
-      );
-      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems(
         cartItems.map((x) =>
           x.id === product.id ? { ...exist, qty: exist.qty + qty } : x
         )
       );
     } else {
-      const jsonCartItem = JSON.stringify([
-        ...cartItems,
-        { ...product, qty: qty },
-      ]);
-      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems([...cartItems, { ...product, qty: qty }]);
     }
   };
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
-      const jsonCartItem = JSON.stringify(
-        cartItems.filter((x) => x.id !== product.id)
-      );
-      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems(cartItems.filter((x) => x.id !== product.id));
     } else {
-      const jsonCartItem = JSON.stringify(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-      localStorage.setItem("cartItems", jsonCartItem);
       setCartItems(
         cartItems.map((x) =>
           x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
@@ -134,32 +117,52 @@ function App() {
     getData("all");
     setFoodType("All");
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
   return (
-    <div className="App">
-      <div className="left-column">
-        <Navbar
-          responsive={isDesktop ? "desktop" : isMobile ? "mobile" : "tablet"}
-          setTrigger={setTrigger}
-        />
-        <TypeBar
-          suggestions={suggestions}
-          foodList={foodList}
-          foodType={foodType}
-          clickHandler={clickHandler}
-          onAdd={onAdd}
-        />
-      </div>
-      <div className="right-column">
-        <Cart
-          cartItems={cartItems}
-          onAdd={onAdd}
-          onRemove={onRemove}
-          responsive={isMobile}
-          trigger={trigger}
-          setTrigger={setTrigger}
-        />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <div className="App">
+              <div className="left-column">
+                <Navbar
+                  responsive={
+                    isDesktop ? "desktop" : isMobile ? "mobile" : "tablet"
+                  }
+                  setTrigger={setTrigger}
+                />
+                <TypeBar
+                  suggestions={suggestions}
+                  foodList={foodList}
+                  foodType={foodType}
+                  clickHandler={clickHandler}
+                  onAdd={onAdd}
+                />
+              </div>
+              <div className="right-column">
+                <Cart
+                  cartItems={cartItems}
+                  onAdd={onAdd}
+                  onRemove={onRemove}
+                  responsive={isMobile}
+                  trigger={trigger}
+                  x
+                  setTrigger={setTrigger}
+                />
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/payment" element={<Payment />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

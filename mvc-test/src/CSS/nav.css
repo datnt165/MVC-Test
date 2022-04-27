@@ -77,3 +77,9 @@ button.cart {
 .cart-img {
   width: 50% !important;
 }
+.login-field {
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 30%;
+}
