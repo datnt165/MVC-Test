@@ -86,6 +86,7 @@ export default function Popup(props) {
               </div>
             </div>
             <div className="mini-line"></div>
+            
             <div className="detail-info">
               <div>
                 <strong>Protein:</strong>{" "}
@@ -104,6 +105,7 @@ export default function Popup(props) {
                 <span>{props.product.detail.decoration}</span>
               </div>
             </div>
+            
             <div className="row">
               <button
                 className="add-cart-button col-1"
